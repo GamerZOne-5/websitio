@@ -1,0 +1,98 @@
+@import "https://fonts.googleapis.com/css2?family=Tiny5&display=swap";
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+html{
+height: 100%;
+}
+body{
+font-family: "tiny5";
+font-size: 1.2rem;
+min-height: 80%;
+}
+.grid-container >*{
+box-shadow: -1px 2px 7px 0px violet;
+border-radius: 4px;
+padding: 10px;
+text-align: center;
+}
+.header { grid-area: header;
+background-color: purple;
+  color: white;
+}
+.navbar{
+grid-area: navbar;
+background-color: purple;
+}
+.sidebar{
+grid-area: sidebar;
+background-color: whitesmoke;
+}
+.main{
+grid-area: main;
+background-color: whitesmoke;
+}
+.footer {
+grid-area: footer;
+background-color: black;
+  color: white;
+}
+.grid-container{
+  background-color:black;
+display: grid;
+gap:10px;
+grid-template-areas:
+"header"
+"navbar"
+"main"
+"sidebar"
+"footer"
+}
+@media (min-width: 600px) {
+.grid-container {
+  background-color: black;
+  grid-template:
+"header header" 100px
+" navbar navbar" 50px
+"sidebar main" auto
+"footer footer" 100px
+  /
+  200px auto;
+}
+}
+@media(min-width:900px){
+  .grid-container{
+    background-color: blue;
+    grid-template: 
+    "header header header" 100px
+    "navbar sidebar main" auto
+    "footer footer" 100px
+    /
+    200px auto 200px ;
+  }
+}
+.menu {
+  list-style: none;
+  padding:0;
+  width: 75%;
+  max-width: 900px;
+  margin: auto;
+}
+.menu li a{
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  display: block;
+}
+.menu li{
+  display: inline-block;
+  text-align: center;
+}
+.logo{
+  margin: 0;
+  padding: 25px;
+  border-radius: 4px;
+  
+}
